@@ -1,0 +1,6 @@
+{% load static %}
+<ul>
+    {% for cinema in cinemas %}
+    <li><a href="{% url 'view_cinema' cinema.id %}">{{ cinema.name }}</a></li>
+    {% endfor %}
+</ul>

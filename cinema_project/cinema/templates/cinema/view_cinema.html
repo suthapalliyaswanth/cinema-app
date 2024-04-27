@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = 'stylesheet' href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+
+<h2>{{ cinema.name }}</h2>
+    <p>{{ cinema.description }}</p>
+    {% if cinema.poster %}
+        <img src="{{ cinema.poster.url }}" alt="{{ cinema.name }}">
+    {% endif %}
+
+    
+</body>
+</html>
